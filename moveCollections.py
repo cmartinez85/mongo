@@ -21,7 +21,7 @@ def main(setup):
             db_dest[coll].remove()
 
             try:
-                objects = db[coll].find()
+                objects = db[coll].find(timeou=False)
                 print "Moviendo datos de %s" % coll
             except:
                 print "Error cogiendo objetos del source %s" % coll
